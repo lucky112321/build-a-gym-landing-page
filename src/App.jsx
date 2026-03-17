@@ -1,9 +1,10 @@
-import LandingPage from './pages/LandingPage.jsx';
-import './App.css'; // Assuming App.css might exist or for future global app styles
+import React from 'react';
+import LandingPage from './pages/LandingPage';
+import './index.css';
 
 const App = () => {
   return (
-    <div className="app-container">
+    <div className="App">
       <LandingPage />
     </div>
   );
