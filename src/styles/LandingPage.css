@@ -1,37 +1,48 @@
+/* General Styles */
 .landing-page {
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #f0f0f0;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+/* Header & Navigation */
+.hero-section {
+  background: url('https://via.placeholder.com/1500x800?text=Gym+Background') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
-.header {
-  background-color: #1a1a1a;
-  padding: 15px 0;
-  border-bottom: 1px solid #333;
-  position: fixed;
-  width: 100%;
-  z-index: 1000;
-  top: 0;
-  left: 0;
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .logo {
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: bold;
-  color: #e0f2f1; /* Light teal */
+  color: #e63946; /* A vibrant red */
 }
 
 .nav-links {
@@ -46,93 +57,118 @@
 }
 
 .nav-links a {
-  color: #f2f2f2;
+  color: white;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1em;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #00bcd4; /* Cyan */
+  color: #e63946;
 }
 
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1574680096145-d05b474200a1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-  padding: 180px 0 100px;
-  text-align: center;
-  color: #fff;
-  margin-top: 60px; /* Adjust for fixed header */
+.join-button {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
 }
 
-.hero-section h1 {
-  font-size: 4em;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  color: #e0f2f1;
+.join-button:hover {
+  background-color: #c92f39;
 }
 
-.hero-section p {
-  font-size: 1.3em;
+.hero-content {
+  position: relative;
+  z-index: 2;
   max-width: 800px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
+  margin: auto;
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
 }
 
 .cta-button {
-  background-color: #00bcd4;
-  color: #fff;
+  background-color: #e63946;
+  color: white;
   padding: 15px 30px;
   border: none;
   border-radius: 5px;
-  font-size: 1.2em;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #0097a7;
-  transform: translateY(-2px);
+  background-color: #c92f39;
 }
 
+/* Sections */
 section {
-  padding: 80px 0;
-  background-color: #1a1a1a;
-  color: #f2f2f2;
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #222;
+  margin-bottom: 1px; /* Small separator */
 }
 
 section:nth-child(even) {
-  background-color: #111;
+  background-color: #1a1a1a;
 }
 
 h2 {
-  font-size: 3em;
-  text-align: center;
-  margin-bottom: 60px;
-  color: #00bcd4;
+  font-size: 2.5em;
+  margin-bottom: 50px;
+  color: #e63946;
 }
 
-.about-section p {
+/* About Section */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-content p {
   font-size: 1.1em;
   line-height: 1.8;
-  margin-bottom: 20px;
-  text-align: justify;
+  text-align: left;
 }
 
+.about-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Services Section */
 .service-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  margin-top: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-card {
-  background-color: #2a2a2a;
+  background-color: #333;
   padding: 30px;
   border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -141,96 +177,116 @@ h2 {
 }
 
 .service-card h3 {
-  font-size: 1.8em;
-  color: #e0f2f1;
+  color: #e63946;
   margin-bottom: 15px;
 }
 
-.service-card p {
-  font-size: 1em;
-  line-height: 1.6;
+/* Trainers Section */
+.trainer-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trainer-card {
+  background-color: #333;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 280px;
+}
+
+.trainer-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #e63946;
+}
+
+.trainer-card h3 {
+  color: #e63946;
+  margin-bottom: 5px;
+}
+
+.trainer-card p {
   color: #ccc;
 }
 
-.cta-section {
-  text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1549060273-774f51790403?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-  color: #fff;
-  padding: 100px 0;
+/* Contact Section */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.cta-section h2 {
-  color: #fff;
-  margin-bottom: 20px;
+.contact-form input, .contact-form textarea {
+  padding: 15px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
 }
 
-.cta-section p {
-  font-size: 1.4em;
-  margin-bottom: 40px;
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: #aaa;
 }
 
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Footer */
 .footer {
-  background-color: #111;
+  background-color: #0d0d0d;
   color: #aaa;
-  padding: 40px 0;
   text-align: center;
-  border-top: 1px solid #333;
-}
-
-.footer p {
-  margin-bottom: 15px;
+  padding: 30px 20px;
   font-size: 0.9em;
-}
-
-.social-links a {
-  color: #aaa;
-  text-decoration: none;
-  margin: 0 15px;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-  color: #00bcd4;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
+    padding: 20px;
   }
 
   .nav-links {
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
   }
 
   .nav-links li {
-    margin: 0 15px 10px;
+    margin: 10px 0;
   }
 
-  .hero-section h1 {
-    font-size: 2.8em;
+  .hero-content h1 {
+    font-size: 2.5em;
   }
 
-  .hero-section p {
-    font-size: 1.1em;
+  .hero-content p {
+    font-size: 1em;
   }
 
-  h2 {
-    font-size: 2.2em;
-    margin-bottom: 40px;
+  .about-content {
+    flex-direction: column;
   }
 
-  .service-cards {
+  .service-cards, .trainer-cards {
     grid-template-columns: 1fr;
   }
 
-  .footer p {
-    margin-bottom: 10px;
-  }
-
-  .social-links a {
-    margin: 0 10px;
+  .trainer-card {
+    width: 100%;
   }
 }
