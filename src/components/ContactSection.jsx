@@ -1,20 +1,21 @@
-import React from 'react';
 import styles from '../styles/ContactSection.module.css';
 
 const ContactSection = () => {
   return (
     <section id="contact" className={styles.contactSection}>
-      <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>GET IN TOUCH</h2>
-        <p className={styles.contactText}>Have questions or ready to start your fitness journey?</p>
-        <p className={styles.contactText}>Reach out to us!</p>
-        <div className={styles.contactInfo}>
-          <p>Email: <a href="mailto:info@fitnessgym.com">info@fitnessgym.com</a></p>
-          <p>Phone: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-          <p>Address: 123 Fitness St, Gym City, GC 12345</p>
-        </div>
-        <button className={styles.contactButton}>Send us a Message</button>
+      <h2>Contact Us</h2>
+      <p>Have questions or want to learn more? Reach out to us!</p>
+      <div className={styles.contactInfo}>
+        <p><strong>Email:</strong> info@gymname.com</p>
+        <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+        <p><strong>Address:</strong> 123 Fitness Ave, Gym City, GC 12345</p>
       </div>
+      <form className={styles.contactForm}>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" className={styles.submitButton}>Send Message</button>
+      </form>
     </section>
   );
 };

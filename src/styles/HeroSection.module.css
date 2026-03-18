@@ -1,12 +1,13 @@
 .heroSection {
-  background: url('https://images.unsplash.com/photo-1549060032-15f11158a75e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+  background: url('/hero-bg.jpg') no-repeat center center/cover; /* Placeholder for a background image */
   height: 80vh;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  color: white;
   text-align: center;
-  color: var(--text-light);
   position: relative;
+  overflow: hidden;
 }
 
 .heroSection::before {
@@ -14,43 +15,41 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.container {
-  position: relative;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
   z-index: 1;
-  max-width: 900px;
-  padding: 20px;
 }
 
-.heroTitle {
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.heroContent h1 {
   font-size: 4rem;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   line-height: 1.2;
-  color: var(--text-light);
 }
 
-.heroSubtitle {
+.heroContent p {
   font-size: 1.5rem;
-  margin-bottom: 40px;
-  color: var(--text-light);
-  opacity: 0.9;
+  margin-bottom: 2rem;
 }
 
-.heroButton {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  padding: 15px 30px;
+.ctaButton {
+  background-color: #ff004f; /* Accent color */
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
   font-size: 1.2rem;
-  font-weight: 700;
-  border-radius: 50px;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.heroButton:hover {
-  background-color: #e65c5c;
-  transform: scale(1.05);
+.ctaButton:hover {
+  background-color: #e60045; /* Darker accent on hover */
 }

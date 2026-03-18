@@ -1,0 +1,7 @@
+/* General app-wide styles can go here if needed */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

@@ -1,26 +1,23 @@
-import React from 'react';
 import styles from '../styles/FeaturesSection.module.css';
 
 const FeaturesSection = () => {
   const features = [
-    { title: 'Expert Trainers', description: 'Certified professionals dedicated to your success.' },
-    { title: 'Modern Equipment', description: 'State-of-the-art machines for all your fitness needs.' },
-    { title: 'Personalized Plans', description: 'Custom workout and nutrition plans tailored for you.' },
-    { title: 'Group Classes', description: 'Fun and engaging classes for all fitness levels.' }
+    { title: 'Modern Equipment', description: 'Access to the latest fitness machines and free weights.' },
+    { title: 'Expert Trainers', description: 'Certified professionals to guide you through your fitness journey.' },
+    { title: 'Group Classes', description: 'Enjoy a variety of classes from yoga to high-intensity interval training.' },
+    { title: 'Nutrition Plans', description: 'Personalized diet plans to complement your workouts.' },
   ];
 
   return (
     <section id="features" className={styles.featuresSection}>
-      <div className={styles.container}>
-        <h2 className={styles.sectionTitle}>WHY CHOOSE US?</h2>
-        <div className={styles.featuresGrid}>
-          {features.map((feature, index) => (
-            <div key={index} className={styles.featureCard}>
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
-            </div>
-          ))}
-        </div>
+      <h2>Our Features</h2>
+      <div className={styles.featuresGrid}>
+        {features.map((feature, index) => (
+          <div key={index} className={styles.featureCard}>
+            <h3>{feature.title}</h3>
+            <p>{feature.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );

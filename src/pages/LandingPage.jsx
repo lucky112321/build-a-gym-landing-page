@@ -1,14 +1,13 @@
-import React from 'react';
-import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
-import FeaturesSection from '../components/FeaturesSection';
-import AboutSection from '../components/AboutSection';
-import ContactSection from '../components/ContactSection';
-import Footer from '../components/Footer';
+import Navbar from '../components/Navbar.jsx';
+import HeroSection from '../components/HeroSection.jsx';
+import FeaturesSection from '../components/FeaturesSection.jsx';
+import AboutSection from '../components/AboutSection.jsx';
+import ContactSection from '../components/ContactSection.jsx';
+import Footer from '../components/Footer.jsx';
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="landingPage">
       <Navbar />
       <HeroSection />
       <FeaturesSection />
