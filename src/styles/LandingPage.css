@@ -1,183 +1,189 @@
-.landing-page {
+/* General Body and Container Styles */
+.landingPage {
   font-family: 'Arial', sans-serif;
-  line-height: 1.6;
   color: #333;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  min-height: 100vh;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.hero-section {
-  background: url('https://via.placeholder.com/1500x800/222222/FFFFFF?text=Gym+Background') no-repeat center center/cover;
+/* Hero Section */
+.heroSection {
+  background: url('https://images.unsplash.com/photo-1579758774780-e04f08c3e602?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
   color: #fff;
   text-align: center;
   padding: 100px 20px;
-  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 60vh;
   position: relative;
 }
 
-.hero-section::before {
+.heroSection::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay for readability */
 }
 
-.hero-content {
+.heroContent {
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  max-width: 800px;
 }
 
-.hero-content h1 {
+.heroContent h1 {
   font-size: 3.5em;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-.hero-content p {
+.heroContent p {
   font-size: 1.5em;
   margin-bottom: 30px;
 }
 
-.cta-button {
-  background-color: #e44d26;
+.ctaButton {
+  background-color: #ff4500; /* Orange-red */
   color: #fff;
   padding: 15px 30px;
   border: none;
   border-radius: 5px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-  background-color: #ff6633;
+.ctaButton:hover {
+  background-color: #e03a00;
 }
 
-section {
-  padding: 80px 0;
+/* Features Section */
+.featuresSection {
+  padding: 60px 20px;
   text-align: center;
+  background-color: #fff;
 }
 
-section h2 {
+.featuresSection h2 {
   font-size: 2.5em;
   margin-bottom: 40px;
-  color: #e44d26;
+  color: #333;
 }
 
-.about-section, .contact-section {
-  background-color: #f4f4f4;
-}
-
-.about-section ul {
-  list-style: none;
-  padding: 0;
+.featureCards {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 30px;
-}
-
-.about-section li {
-  background-color: #fff;
-  margin: 10px;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(25% - 40px);
-  min-width: 200px;
-}
-
-.services-section {
-  background-color: #fff;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
   gap: 30px;
-  margin-top: 30px;
 }
 
-.service-item {
+.featureCard {
   background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.service-item h3 {
-  color: #e44d26;
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureCard h3 {
+  font-size: 1.8em;
   margin-bottom: 15px;
+  color: #ff4500;
 }
 
-footer {
+.featureCard p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Call to Action Section */
+.callToActionSection {
   background-color: #333;
   color: #fff;
   text-align: center;
-  padding: 40px 0;
-  margin-top: 50px;
+  padding: 80px 20px;
 }
 
-footer p {
-  margin: 0;
+.callToActionSection h2 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.callToActionSection p {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+/* Footer Section */
+.footerSection {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9em;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero-content h1 {
+  .heroContent h1 {
     font-size: 2.5em;
   }
 
-  .hero-content p {
+  .heroContent p {
     font-size: 1.2em;
   }
 
-  section {
-    padding: 60px 0;
-  }
-
-  section h2 {
+  .featuresSection h2,
+  .callToActionSection h2 {
     font-size: 2em;
   }
 
-  .about-section li {
-    flex: 1 1 calc(50% - 40px);
+  .featureCards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featureCard {
+    max-width: 90%;
+  }
+
+  .callToActionSection p {
+    font-size: 1.2em;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-content h1 {
+  .heroContent h1 {
     font-size: 2em;
   }
 
-  .hero-content p {
+  .heroContent p {
     font-size: 1em;
   }
 
-  .cta-button {
+  .ctaButton {
     padding: 10px 20px;
     font-size: 1em;
   }
 
-  section {
-    padding: 40px 0;
+  .featuresSection,
+  .callToActionSection {
+    padding: 40px 15px;
   }
 
-  section h2 {
+  .featuresSection h2,
+  .callToActionSection h2 {
     font-size: 1.8em;
-  }
-
-  .about-section li {
-    flex: 1 1 100%;
   }
 }
