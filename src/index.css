@@ -1,39 +1,57 @@
-/* Basic Reset */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #ff6b6b;
+  --secondary-color: #556270;
+  --text-light: #f4f4f4;
+  --text-dark: #333;
+  --bg-dark: #222;
+  --bg-light: #fff;
+}
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
 }
 
-/* Basic Link Styling */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5em;
+  color: var(--text-dark);
+}
+
 a {
-  color: #ff4500;
   text-decoration: none;
+  color: inherit;
 }
 
-a:hover {
-  text-decoration: underline;
+ul {
+  list-style: none;
 }
 
-/* Remove default button styles for consistency */
 button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
   cursor: pointer;
-  font-family: inherit;
-  font-size: inherit;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }

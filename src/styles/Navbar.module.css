@@ -1,0 +1,53 @@
+.navbar {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.navLinks {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.navLinks a {
+  color: var(--text-light);
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: var(--primary-color);
+}
+
+.joinButton {
+  background-color: var(--primary-color);
+  color: var(--text-light) !important;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: 700 !important;
+}
+
+.joinButton:hover {
+  background-color: #e65c5c;
+}
