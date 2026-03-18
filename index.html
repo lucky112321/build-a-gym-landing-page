@@ -3,98 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gym Landing Page</title>
+    <title>Fitness Forge Gym</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="#" class="logo">GYM FIT</a>
-                <button class="menu-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#join" class="btn btn-primary">Join Now</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="mainHeader">
+        <nav class="mainNav">
+            <a href="#" class="logo">FitnessForge</a>
+            <div class="navToggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navList" id="navList">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="ctaButton">Join Now</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section id="home" class="hero-section">
-        <div class="container">
-            <h1>Unleash Your Potential</h1>
-            <p>Transform your body and mind with our state-of-the-art facilities and expert trainers.</p>
-            <a href="#join" class="btn btn-secondary">Start Your Journey</a>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="heroSection">
+            <div class="heroContent">
+                <h1>Unleash Your Potential</h1>
+                <p>Train harder, get stronger, and achieve your fitness goals with FitnessForge.</p>
+                <a href="#" class="ctaButton">Start Your Journey</a>
+            </div>
+        </section>
 
-    <section id="features" class="features-section">
-        <div class="container">
+        <section id="features" class="featuresSection">
             <h2>Why Choose Us?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <h3>Modern Equipment</h3>
-                    <p>Access to the latest fitness technology and machines for effective workouts.</p>
+            <div class="featureGrid">
+                <div class="featureItem">
+                    <h3>State-of-the-Art Equipment</h3>
+                    <p>Access to the latest and most effective fitness machinery.</p>
                 </div>
-                <div class="feature-item">
+                <div class="featureItem">
                     <h3>Expert Trainers</h3>
-                    <p>Certified professionals to guide you through personalized training programs.</p>
+                    <p>Certified professionals dedicated to guiding your fitness journey.</p>
                 </div>
-                <div class="feature-item">
+                <div class="featureItem">
                     <h3>Diverse Classes</h3>
-                    <p>From yoga to HIIT, find a class that fits your style and goals.</p>
+                    <p>From HIIT to Yoga, find a class that fits your style and goals.</p>
                 </div>
-                <div class="feature-item">
+                <div class="featureItem">
                     <h3>Supportive Community</h3>
-                    <p>Train alongside like-minded individuals in an encouraging environment.</p>
+                    <p>Become part of a motivating and encouraging fitness family.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <img src="https://via.placeholder.com/500x300?text=Gym+Interior" alt="Gym Interior" class="about-image">
-                <div class="about-text">
-                    <h2>About Our Gym</h2>
-                    <p>GYM FIT is dedicated to helping individuals achieve their fitness goals through a holistic approach. We believe in creating a welcoming and motivating environment where everyone can thrive, regardless of their fitness level. Our mission is to empower you to live a healthier, happier life.</p>
-                    <p>With a focus on innovation and member satisfaction, we continuously update our facilities and training methods to provide the best possible experience.</p>
-                    <a href="#" class="btn btn-outline">Learn More</a>
-                </div>
+        <section id="about" class="aboutSection">
+            <div class="aboutContent">
+                <h2>About FitnessForge</h2>
+                <p>FitnessForge is more than just a gym; it's a community dedicated to health, strength, and personal growth. Founded on the principle that everyone deserves the opportunity to achieve their best self, we provide a supportive environment, top-tier equipment, and expert guidance. Join us and discover what you're truly capable of.</p>
+                <a href="#" class="ctaButton">Learn More</a>
             </div>
-        </div>
-    </section>
+            <div class="aboutImage">
+                <img src="https://via.placeholder.com/600x400?text=Gym+Interior" alt="Gym Interior">
+            </div>
+        </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Join GYM FIT today and take the first step towards a stronger you. Contact us for a free trial!</p>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message (Optional)"></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
+        <section id="contact" class="contactSection">
+            <h2>Contact Us</h2>
+            <p>Have questions or ready to join? Reach out to us!</p>
+            <form class="contactForm">
+                <input type="text" placeholder="Your Name" name="userName" required>
+                <input type="email" placeholder="Your Email" name="userEmail" required>
+                <textarea placeholder="Your Message" name="userMessage" rows="5" required></textarea>
+                <button type="submit" class="ctaButton">Send Message</button>
             </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 GYM FIT. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"><img src="https://via.placeholder.com/24?text=F" alt="Facebook"></a>
-                <a href="#" aria-label="Twitter"><img src="https://via.placeholder.com/24?text=T" alt="Twitter"></a>
-                <a href="#" aria-label="Instagram"><img src="https://via.placeholder.com/24?text=I" alt="Instagram"></a>
-            </div>
+    <footer class="mainFooter">
+        <p>&copy; 2024 FitnessForge. All rights reserved.</p>
+        <div class="socialLinks">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
         </div>
     </footer>
 
